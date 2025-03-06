@@ -1,3 +1,202 @@
-p{
-    background-color: #a4133c, #c9184a, #ff4d6d, #ff758f, #ffb3c1, #fb6f92;
+p {
+    background-color: #c9184a, #ff4d6d, #ff758f, #ffb3c1;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* ///////////// Preloader //////////// */
+
+.preloader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffb3c1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.flower {
+    width: 150px; 
+    height: 150px; 
+    background-image: url('./1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    animation: fadeInFlower 4s ease-in-out infinite;
+}
+
+@keyframes fadeInFlower {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    25% {
+        opacity: 0.6;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.loading-text {
+    font-size: 18px;
+    color:  #c9184a;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInText 3s ease-in-out forwards;
+    font-weight: bold;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ///////////// Preloader //////////// */
+
+
+/* /////////////  chatbox  //////////// */
+.chat-btn {
+    position: fixed;
+    bottom: 35px;
+    right: 30px;
+    background-color: #c9184a;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.555);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chat-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 280px;
+    background: #ffb3c1;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.chat-header {
+    background: #ff4d6d;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.chat-body {
+    padding: 15px;
+    font-size: 14px;
+    color: #000;
+    line-height: 1.5;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #ff4d6d;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.whatsapp-link img {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.chat-box {
+    display: none;
+}
+
+.chat-box.visible {
+    display: block;
+}
+
+/* ///////////// chatbox   //////////// */
+

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Times New Roman', Times, serif }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ff4d6d;
+            padding: 15px 80px;
+            color: rgb(255, 255, 255);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 6px 14px;
+            display: block;
+            font-size: 17.4px;
+        }
+        .nav-links a:hover{
+            color: #c9184a;
+            border-bottom: 1px solid black;
+        }
+        .logo{
+            height: 60px;
+        }
+
+        .logo img{
+            width: 180px;
+            height: 96px;
+            margin-top: -13%;
+            z-index: 1;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #ffb3c1;
+            color: rgb(0, 0, 0);
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 180px;
+        }
+
+        .dropdown-menu li a {
+            color: rgb(0, 0, 0);
+            padding: 8px;
+            display: block;
+        }
+
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -370px;
+            width: 350px;
+            height: 100%;
+            background:#ff4d6d ;
+            padding: 40px;
+            transition: 0.3s;
+            box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.877);
+            z-index: 1000;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar .close-btn {
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+            text-align: right;
+            display: block;
+        }
+
+        .sidebar-links {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .sidebar-links li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+        }
+
+        .sidebar-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar-dropdown-menu {
+            display: none;
+            padding-left: 15px;
+        }
+
+        .sidebar-dropdown.active .sidebar-dropdown-menu {
+            display: block;
+        }
+
+        @media (max-width: 1050px) {
+            .nav-links { display: none; }
+            .menu-icon { display: block; }
+        }
+
+
+        .hero-img{
+            
+        }
+    </style>
+</head>
+<body>
+<a href=""></a>
+    <nav class="navbar">
+        <div class="logo"><img src="./logo.jpg" alt=""></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Occasions ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Birthday</a></li>
+                    <li><a href="#">Get well soon</a></li>
+                    <li><a href="#">Thank you</a></li>
+                    <li><a href="#">Fathers day</a></li>
+                    <li><a href="#">Eid</a></li>
+                    <li><a href="#">Sympathy</a></li>
+                    <li><a href="#">New year</a></li>
+                    <li><a href="#">Graduation</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">More ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Anniversary</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">New baby</a></li>
+                    <li><a href="#">Congratulations</a></li>
+                    <li><a href="#">Valentines day</a></li>
+                    <li><a href="#">Wedding</a></li>
+                    <li><a href="#">Christmas</a></li>
+                    <li><a href="#">Mothers day</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Flowers ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Anniversary</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">New baby</a></li>
+                    <li><a href="#">Congratulations</a></li>
+                    <li><a href="#">Valentines day</a></li>
+                    <li><a href="#">Wedding</a></li>
+                    <li><a href="#">Christmas</a></li>
+                    <li><a href="#">Mothers day</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Cakes</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="bx bx-menu"></i>
+        </div>
+    </nav>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <span class="close-btn">&times;</span>
+        <ul class="sidebar-links">
+            <li><a href="#">Home</a></li>
+            <li class="sidebar-dropdown">
+                <a href="#">Occasions ▼</a>
+                <ul class="sidebar-dropdown-menu">
+                    <li><a href="#">Birthday</a></li>
+                    <li><a href="#">Get well soon</a></li>
+                    <li><a href="#">Thank you</a></li>
+                    <li><a href="#">Fathers day</a></li>
+                    <li><a href="#">Eid</a></li>
+                    <li><a href="#">Sympathy</a></li>
+                    <li><a href="#">New year</a></li>
+                    <li><a href="#">Graduation</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-dropdown">
+                <a href="#">More ▼</a>
+                <ul class="sidebar-dropdown-menu">
+                    <li><a href="#">Anniversary</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">New baby</a></li>
+                    <li><a href="#">Congratulations</a></li>
+                    <li><a href="#">Valentines day</a></li>
+                    <li><a href="#">Wedding</a></li>
+                    <li><a href="#">Christmas</a></li>
+                    <li><a href="#">Mothers day</a></li>
+                </ul>
+            </li>
+           <li class="sidebar-dropdown">
+                <a href="#">Flowers ▼</a>
+                <ul class="sidebar-dropdown-menu">
+                    <li><a href="#">Anniversary</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">New baby</a></li>
+                    <li><a href="#">Congratulations</a></li>
+                    <li><a href="#">Valentines day</a></li>
+                    <li><a href="#">Wedding</a></li>
+                    <li><a href="#">Christmas</a></li>
+                    <li><a href="#">Mothers day</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Cakes</a></li>
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+    </div>
+<img class="hero-img" src="./2.png" alt="">
+    <script>
+        // Sidebar Toggle
+        document.querySelector(".menu-icon").addEventListener("click", function () {
+            document.querySelector(".sidebar").classList.add("active");
+        });
+
+        document.querySelector(".close-btn").addEventListener("click", function () {
+            document.querySelector(".sidebar").classList.remove("active");
+        });
+
+        document.addEventListener("click", function (event) {
+            let sidebar = document.querySelector(".sidebar");
+            let menuIcon = document.querySelector(".menu-icon");
+            if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+
+        // Sidebar Dropdown
+        document.querySelectorAll(".sidebar-dropdown a").forEach(link => {
+            link.addEventListener("click", function () {
+                this.parentElement.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
