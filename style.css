@@ -9,6 +9,10 @@ body {
 
 }
 
+.hidden {
+    display: none;
+}
+
 /* ///////////// Preloader //////////// */
 
 .preloader {
@@ -200,3 +204,127 @@ body {
 
 /* ///////////// chatbox   //////////// */
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff4d6d;
+    padding: 15px 80px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 6px 14px;
+    display: block;
+    font-size: 17.4px;
+}
+.nav-links a:hover{
+    color: #c9184a;
+    border-bottom: 1px solid black;
+}
+.logo{
+    height: 60px;
+}
+
+.logo img{
+    width: 180px;
+    height: 96px;
+    margin-top: -13%;
+    z-index: 1;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffb3c1;
+    color: rgb(0, 0, 0);
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+}
+
+.dropdown-menu li a {
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    display: block;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -370px;
+    width: 350px;
+    height: 100%;
+    background:#ff4d6d ;
+    padding: 40px;
+    transition: 0.3s;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.877);
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+    display: block;
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar-links li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.329);
+}
+
+.sidebar-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar-dropdown-menu {
+    display: none;
+    padding-left: 15px;
+}
+
+.sidebar-dropdown.active .sidebar-dropdown-menu {
+    display: block;
+}
+
+@media (max-width: 1050px) {
+    .nav-links { display: none; }
+    .menu-icon { display: block; }
+}

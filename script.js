@@ -4,11 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatBtn = document.getElementById("chatBtn");
     const chatBox = document.getElementById("chatBox");
     const closeBtn = document.querySelector(".close-btn");
+    const mainContent = document.getElementById("mainContent");
 
-    // Hide Preloader After 6s
+    // Hide Preloader After 6s and Show Main Content
     if (preloader) {
         setTimeout(() => {
             preloader.style.display = 'none';
+
+            // Show Main Content
+            if (mainContent) {
+                mainContent.classList.remove('hidden');
+            }
 
             // Chat Button Effect (Now runs after preloader hides)
             if (chatBtn) {
@@ -38,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     chatBtn?.addEventListener("click", toggleChat);
     closeBtn?.addEventListener("click", toggleChat);
 });
-
 
 
 

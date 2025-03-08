@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Times New Roman', Times, serif }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif
+        }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ff4d6d;
-            padding: 15px 80px;
+            background: #ff758f;
+            padding: 6px 80px;
             color: rgb(255, 255, 255);
+            z-index: 1;
         }
 
         .nav-links {
@@ -34,37 +45,41 @@
             padding: 6px 14px;
             display: block;
             font-size: 17.4px;
+            font-weight: 560;
         }
-        .nav-links a:hover{
+
+        .nav-links a:hover {
             color: #c9184a;
-            border-bottom: 1px solid black;
-        }
-        .logo{
+            }
+
+        .logo {
             height: 60px;
         }
 
-        .logo img{
-            width: 180px;
-            height: 96px;
-            margin-top: -13%;
+        .logo img {
+            width: 170px;
+            height: 120px;
+            margin-top: -16%;
             z-index: 1;
         }
+
         .dropdown-menu {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background: #ffb3c1;
-            color: rgb(0, 0, 0);
+            background: #ff758f;
+            color: rgb(255, 255, 255);
             list-style: none;
             padding: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             width: 180px;
+            z-index: 1;
         }
 
         .dropdown-menu li a {
-            color: rgb(0, 0, 0);
-            padding: 8px;
+            padding: 12px 12px;
+            border-bottom: 1px solid goldenrod;
             display: block;
         }
 
@@ -85,7 +100,7 @@
             left: -370px;
             width: 350px;
             height: 100%;
-            background:#ff4d6d ;
+            background: #ff4d6d;
             padding: 40px;
             transition: 0.3s;
             box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.877);
@@ -129,14 +144,83 @@
             display: block;
         }
 
-        @media (max-width: 1050px) {
-            .nav-links { display: none; }
-            .menu-icon { display: block; }
+        @media (max-width: 1200px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 75%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .hero-btn {
+            position: absolute;
+            bottom: 58%;
+            left: 9.4%;
+            padding: 11px 38px;
+            background-color: #ff4d6d;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid goldenrod;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 18px 16px rgba(0, 0, 0, 0.87);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            transition: all 0.3s ease-in;
+            transform: scale(1.05);
+            background-color: #c9184a;
+            border: 1px solid goldenrod;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .hero-section {
+                height: 50vh;
+            }
+
+            .hero-btn {
+                bottom: 50%;
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            .hero-section {
+                height: 40vh;
+            }
+
+            .hero-btn {
+                font-size: 14px;
+                padding: 6px 14px;
+            }
         }
     </style>
 </head>
+
 <body>
-<a href=""></a>
+    <a href=""></a>
     <nav class="navbar">
         <div class="logo"><img src="./logo.jpg" alt=""></div>
         <ul class="nav-links">
@@ -155,19 +239,6 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">More ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Anniversary</a></li>
-                    <li><a href="#">Romance</a></li>
-                    <li><a href="#">New baby</a></li>
-                    <li><a href="#">Congratulations</a></li>
-                    <li><a href="#">Valentines day</a></li>
-                    <li><a href="#">Wedding</a></li>
-                    <li><a href="#">Christmas</a></li>
-                    <li><a href="#">Mothers day</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
                 <a href="#">Flowers ▼</a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Anniversary</a></li>
@@ -183,13 +254,14 @@
             <li><a href="#">Cakes</a></li>
             <li><a href="#">Gifts</a></li>
             <li><a href="#">Blogs</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
         <div class="menu-icon">
             <i class="bx bx-menu"></i>
         </div>
     </nav>
 
-    <!-- Sidebar Menu -->
     <div class="sidebar">
         <span class="close-btn">&times;</span>
         <ul class="sidebar-links">
@@ -208,19 +280,6 @@
                 </ul>
             </li>
             <li class="sidebar-dropdown">
-                <a href="#">More ▼</a>
-                <ul class="sidebar-dropdown-menu">
-                    <li><a href="#">Anniversary</a></li>
-                    <li><a href="#">Romance</a></li>
-                    <li><a href="#">New baby</a></li>
-                    <li><a href="#">Congratulations</a></li>
-                    <li><a href="#">Valentines day</a></li>
-                    <li><a href="#">Wedding</a></li>
-                    <li><a href="#">Christmas</a></li>
-                    <li><a href="#">Mothers day</a></li>
-                </ul>
-            </li>
-           <li class="sidebar-dropdown">
                 <a href="#">Flowers ▼</a>
                 <ul class="sidebar-dropdown-menu">
                     <li><a href="#">Anniversary</a></li>
@@ -236,11 +295,18 @@
             <li><a href="#">Cakes</a></li>
             <li><a href="#">Gifts</a></li>
             <li><a href="#">Blogs</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </div>
-<img class="hero-img" src="./2.png" alt="">
+    <div class="hero-section">
+        <!-- <img class="hero-img" src="./Pink Floral Flower Shop Banner (1).png" alt="Hero Image"> -->
+        <img class="hero-img img-fluid" src="./hero-img.png" alt="Hero Image">
+        <a href="#shop-now" class="hero-btn">Shop Now</a>
+    </div>
+
+    
     <script>
-        // Sidebar Toggle
         document.querySelector(".menu-icon").addEventListener("click", function () {
             document.querySelector(".sidebar").classList.add("active");
         });
@@ -257,7 +323,6 @@
             }
         });
 
-        // Sidebar Dropdown
         document.querySelectorAll(".sidebar-dropdown a").forEach(link => {
             link.addEventListener("click", function () {
                 this.parentElement.classList.toggle("active");
@@ -265,4 +330,5 @@
         });
     </script>
 </body>
+
 </html>
