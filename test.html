@@ -102,8 +102,12 @@
         </ul>
     </div>
     <div class="hero-section">
-        <!-- <img class="hero-img" src="./Pink Floral Flower Shop Banner (1).png" alt="Hero Image"> -->
-        <img class="hero-img img-fluid" src="./hero-img.png" alt="Hero Image">
+        <!-- <img class="hero-img img-fluid" src="./Pink Floral Flower Shop Banner (14).png" alt="Hero Image"> -->
+        <video class="hero-img" autoplay muted loop playsinline>
+            <source src="./assets/Pink Floral Flower Shop Banner (2).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
         <a href="#shop-now" class="hero-btn">Shop Now</a>
     </div>
 
@@ -205,10 +209,38 @@
         </div>
     </div>
 
+
+    <section class="hot-deal">
+        <div class="container-deal">
+            <div class="deal-content">
+                <img src="./p3.jpg" alt="Hot Deal Image" class="deal-img">
+                
+                <div class="deal-text">
+                    <h3 class="deal-heading">Hurry Up, Flower Lovers! 🌸</h3>
+                    <h1 class="deal-title">Special Bloom Sale! Get Up To <span>20% Off</span></h1>
+                    <p>Brighten up your day with our fresh, hand-picked flowers!  
+                       Limited-time offer on beautiful bouquets and floral arrangements.  
+                       Perfect for gifting or decorating your home with love.</p>
+                    <div class="countdown">
+                        <div class="time-box"><span id="hours">00</span> Hour</div>
+                        <div class="time-box"><span id="minutes">00</span> Min</div>
+                        <div class="time-box"><span id="seconds">00</span> Sec</div>
+                    </div>
+                    <a href="#shop-now" class="shop-btn">Shop Fresh Flowers 🌿</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
     <script>
         document.querySelector(".menu-icon").addEventListener("click", function () {
             document.querySelector(".sidebar").classList.add("active");
-            document.querySelector(".nav-links").style.display = "none"; // Hide nav-links when sidebar is active
+            document.querySelector(".nav-links").style.display = "none";
         });
 
         document.querySelector(".close-btn").addEventListener("click", function () {
@@ -220,7 +252,7 @@
             let menuIcon = document.querySelector(".menu-icon");
             if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
                 sidebar.classList.remove("active");
-                document.querySelector(".nav-links").style.display = "flex"; // Show nav-links again
+                document.querySelector(".nav-links").style.display = "flex";
             }
         });
 
@@ -229,6 +261,40 @@
                 this.parentElement.classList.toggle("active");
             });
         });
+
+
+
+        function startCountdown(targetDate) {
+    function updateTimer() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference < 0) {
+            clearInterval(interval);
+            document.getElementById("hours").innerText = "00";
+            document.getElementById("minutes").innerText = "00";
+            document.getElementById("seconds").innerText = "00";
+            return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+    }
+
+    const interval = setInterval(updateTimer, 1000);
+    updateTimer();
+}
+
+// Set target date (Change as needed)
+const targetDate = new Date("2025-12-31 23:59:59").getTime();
+startCountdown(targetDate);
+
     </script>
 </body>
 
