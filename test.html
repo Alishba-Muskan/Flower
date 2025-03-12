@@ -7,9 +7,9 @@
     <title>Responsive Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="test.css">
-    
+
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <input style="display: block;" type="text" id="search" placeholder="Search products...">
             <i class="fas fa-search search-icon"></i>
         </div>
-        <div class="logo"><img src="./logo.jpg" alt=""></div>
+        <div class="logo"><img src="./assets/logo.jpg" alt=""></div>
         <div class="cart-container">
             <label class="bag-icon"><i class='bx bxs-shopping-bags cart-icon'></i><span id="cart-notification"
                     class="cart-notification">0</span></label>
@@ -103,18 +103,22 @@
     </div>
     <div class="hero-section">
         <!-- <img class="hero-img img-fluid" src="./Pink Floral Flower Shop Banner (14).png" alt="Hero Image"> -->
-        <video class="hero-img" autoplay muted loop playsinline>
+        <img class="hero-img img-fluid" src="./assets/hero-img (3).png.jpg" alt="Hero Image">
+        <!-- <video class="hero-img" autoplay muted loop playsinline>
             <source src="./assets/Pink Floral Flower Shop Banner (2).mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
-        
+        </video> -->
+
         <a href="#shop-now" class="hero-btn">Shop Now</a>
     </div>
 
     <section class="services">
         <h1>Welcome To Flower Shop</h1>
         <p class="description">
-            "Welcome to Florist – your one-stop destination for beautiful, fresh flowers! We offer a wide range of handpicked floral arrangements, perfect for every occasion. Whether you need a stunning bouquet for a loved one, elegant wedding flowers, or a charming gift, we’ve got you covered. Experience the beauty of nature with our fresh and fragrant blooms, delivered with love and care."
+            "Welcome to Florist – your one-stop destination for beautiful, fresh flowers! We offer a wide range of
+            handpicked floral arrangements, perfect for every occasion. Whether you need a stunning bouquet for a loved
+            one, elegant wedding flowers, or a charming gift, we’ve got you covered. Experience the beauty of nature
+            with our fresh and fragrant blooms, delivered with love and care."
         </p>
 
         <div class="features">
@@ -125,9 +129,9 @@
                     <p>Enjoy free delivery on all orders with easy returns.</p>
                 </div>
             </div>
-        
+
             <div class="divider"></div>
-        
+
             <div class="feature">
                 <i class="fas fa-thumbs-up"></i>
                 <div class="feature-text">
@@ -135,9 +139,9 @@
                     <p>Shop with confidence with our secure payment options.</p>
                 </div>
             </div>
-        
+
             <div class="divider"></div>
-        
+
             <div class="feature">
                 <i class="fas fa-headset"></i>
                 <div class="feature-text">
@@ -145,9 +149,9 @@
                     <p>Our team is available anytime to assist you with your orders.</p>
                 </div>
             </div>
-        
+
             <div class="divider"></div>
-        
+
             <div class="feature">
                 <i class="fas fa-leaf"></i>
                 <div class="feature-text">
@@ -156,7 +160,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
 
@@ -169,7 +173,7 @@
                 <p class="title">Creative Flowers Vase</p>
             </div>
         </div>
-        
+
         <div class="card">
             <img src="./assets/c1.2.jpg" alt="Weekend Offers">
             <div class="text-overlay">
@@ -178,7 +182,7 @@
                 <p>available now at all stores</p>
             </div>
         </div>
-        
+
         <div class="card">
             <img src="./assets/c1.3.jpg" alt="Beautiful Flowers">
             <div class="text-overlay">
@@ -190,7 +194,7 @@
 
 
 
-    
+
     <div class="container1">
         <div class="card1">
             <img src="./assets/c2.1.jpg" alt="Autumn Jackets">
@@ -213,14 +217,14 @@
     <section class="hot-deal">
         <div class="container-deal">
             <div class="deal-content">
-                <img src="./p3.jpg" alt="Hot Deal Image" class="deal-img">
-                
+                <img src="./assets/p3.jpg" alt="Hot Deal Image" class="deal-img">
+
                 <div class="deal-text">
                     <h3 class="deal-heading">Hurry Up, Flower Lovers!</h3>
                     <h1 class="deal-title">Special Bloom Sale! Get Up To <span>20% Off</span></h1>
-                    <p>Brighten up your day with our fresh, hand-picked flowers!  
-                       Limited-time offer on beautiful bouquets and floral arrangements.  
-                       Perfect for gifting or decorating your home with love.</p>
+                    <p>Brighten up your day with our fresh, hand-picked flowers!
+                        Limited-time offer on beautiful bouquets and floral arrangements.
+                        Perfect for gifting or decorating your home with love.</p>
                     <div class="countdown">
                         <div class="time-box"><span id="hours">00</span> Hour</div>
                         <div class="time-box"><span id="minutes">00</span> Min</div>
@@ -231,46 +235,33 @@
             </div>
         </div>
     </section>
-    
+
 
 
 
 
 
     <script>
-        document.querySelector(".menu-icon").addEventListener("click", function () {
-            document.querySelector(".sidebar").classList.add("active");
-            document.querySelector(".nav-links").style.display = "none";
-        });
+        const q = s => document.querySelector(s);
 
-        document.querySelector(".close-btn").addEventListener("click", function () {
-            document.querySelector(".sidebar").classList.remove("active");
-        });
+        q(".menu-icon").onclick = () => (q(".sidebar").classList.add("active"), q(".nav-links").style.display = "none");
+        q(".close-btn").onclick = () => q(".sidebar").classList.remove("active");
 
-        document.addEventListener("click", function (event) {
-            let sidebar = document.querySelector(".sidebar");
-            let menuIcon = document.querySelector(".menu-icon");
-            if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
-                sidebar.classList.remove("active");
-                document.querySelector(".nav-links").style.display = "flex";
-            }
-        });
+        document.onclick = e => (!q(".sidebar").contains(e.target) && !q(".menu-icon").contains(e.target)) &&
+            (q(".sidebar").classList.remove("active"), q(".nav-links").style.display = "flex");
 
-        document.querySelectorAll(".sidebar-dropdown a").forEach(link => {
-            link.addEventListener("click", function () {
-                this.parentElement.classList.toggle("active");
-            });
-        });
-
+        document.querySelectorAll(".sidebar-dropdown a").forEach(link =>
+            link.onclick = () => link.parentElement.classList.toggle("active")
+        );
 
 
         setInterval(() => {
-    let d = new Date("2025-12-31 23:59:59") - new Date();
-    if (d < 0) return;
-    ["hours", "minutes", "seconds"].forEach((id, i) =>
-        document.getElementById(id).innerText = String(Math.floor(d / [36e5, 6e4, 1e3][i]) % (i ? 60 : 24)).padStart(2, "0")
-    );
-}, 1000);
+            let d = new Date("2025-12-31 23:59:59") - new Date();
+            if (d < 0) return;
+            ["hours", "minutes", "seconds"].forEach((id, i) =>
+                document.getElementById(id).innerText = String(Math.floor(d / [36e5, 6e4, 1e3][i]) % (i ? 60 : 24)).padStart(2, "0")
+            );
+        }, 1000);
 
     </script>
 </body>
