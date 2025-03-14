@@ -877,3 +877,141 @@ body::before {
         margin-top: 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Review Section */
+  .reviews-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #d56a6a;
+    margin-bottom: 10px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 40px;
+  }
+  
+  /* Reviews Container */
+  .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .review-card {
+    background-color: #fff;
+    border: 2px solid #f3e1e1;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .review-stars {
+    font-size: 1.7rem;
+    color: #ffb400;
+    margin-bottom: 15px;
+  }
+  
+  .review-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .review-author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Review Prompt Section */
+  .review-prompt {
+    margin-top: 50px;
+  }
+  
+  .review-prompt p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .review-btn {
+    background-color: #d56a6a;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .review-btn:hover {
+    background-color: #d25757;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+    }
+  
+    .section-subtitle {
+      font-size: 1rem;
+    }
+  
+    .review-card {
+      padding: 20px;
+    }
+  
+    .review-stars {
+      font-size: 1.5rem;
+    }
+  
+    .review-text {
+      font-size: 1rem;
+    }
+  
+    .review-btn {
+      padding: 10px 20px;
+      font-size: 1.1rem;
+    }
+  }
+
+  
