@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            padding: 20px;
+        }
+        .offer-container-cake1 {
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            background: #ed0b0b;
+        }
+        .offer-box-cake1 {
+            background: #a00000;
+            color: white;
+            padding: 40px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .offer-box-cake1 h2 {
+            font-size: 24px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .offer-box-cake1 p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .order-btn-cake1 {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid white;
+            background: transparent;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .order-btn-cake1:hover {
+            background: white;
+            color: #a00000;
+        }
+        .offer-img-cake1 {
+            margin-left: 5%;
+            width: 55%;
+        }
+        .offer-img-cake1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .offer-container-cake1 {
+                flex-direction: column;
+                text-align: center;
+            }
+            .offer-box-cake1, .offer-img-cake1 {
+                width: 100%;
+            }
+            .offer-box-cake1 {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="offer-container-cake1">
+        <div class="offer-box-cake1">
+            <h2>Special Offer</h2>
+            <p>When you buy three cakes of 1 kilogram or two cakes of 1.5 kilograms, you get a 1-kilogram cake as a gift.</p>
+            <button class="order-btn-cake1">To Order</button>
+        </div>
+        <div class="offer-img-cake1">
+            <img src="./assets/cakecatalog1.jfif" alt="Chocolate Cake">
+        </div>
+    </div>
+
+</body>
+</html>

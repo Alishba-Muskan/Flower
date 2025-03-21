@@ -17,7 +17,7 @@ showNavBar.innerHTML = ` <a href=""></a>
     </nav>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="./test.html">Home</a></li>
             <li class="dropdown">
                 <a href="#">Occasions ▼</a>
                 <ul class="dropdown-menu">
@@ -43,9 +43,9 @@ showNavBar.innerHTML = ` <a href=""></a>
                     <li><a href="#">Tuberoses</a></li>
                 </ul>
             </li>
-            <li><a href="#">Cakes</a></li>
-            <li><a href="#">Gifts</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="./cake.html">Cakes</a></li>
+            <li><a href="./gift.html">Gifts</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -79,9 +79,9 @@ showNavBar.innerHTML = ` <a href=""></a>
                     <li><a href="#">Tuberoses</a></li>
                 </ul>
             </li>
-            <li><a href="#">Cakes</a></li>
-            <li><a href="#">Gifts</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><a href="./cake.html">Cakes</a></li>
+            <li><a href="./gift.html">Gifts</a></li>
+            <li><a href="./blog.html">Blogs</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -149,6 +149,26 @@ subscription.innerHTML = `
                 </div>
             </div>
         </div>`;
+
+
+
+
+
+
+
+
+
+        const q = s => document.querySelector(s);
+        q(".menu-icon").onclick = () => (q(".sidebar").classList.add("active"), q(".nav-links").style.display = "none");
+        q(".close-btn").onclick = () => q(".sidebar").classList.remove("active");
+        document.onclick = e => (!q(".sidebar").contains(e.target) && !q(".menu-icon").contains(e.target)) &&
+            (q(".sidebar").classList.remove("active"), q(".nav-links").style.display = "flex");
+        document.querySelectorAll(".sidebar-dropdown a").forEach(link =>
+            link.onclick = () => link.parentElement.classList.toggle("active")
+        );
+
+
+        
 
         document.addEventListener('DOMContentLoaded', () => {
             const chatBtn = document.getElementById("chatBtn"),
