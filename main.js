@@ -97,8 +97,7 @@ subscription.innerHTML = `
             <input type="text" placeholder="Enter your name" required>
             <input type="email" placeholder="Enter your email" required>
             <button type="submit">Subscribe</button>
-        </form>
-            <img src="./assets/12.png" alt="Leaves" class="leaves">`;
+        </form>`;
 
 
     var footersection = document.getElementById("bottomsection")
