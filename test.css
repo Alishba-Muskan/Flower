@@ -880,7 +880,7 @@ body::before {
 }
 
 .subcription-text {
-    color: #000000;
+    color: #004D40;
     padding: 60px;
     width: 55%;
     display: flex;
@@ -891,9 +891,9 @@ body::before {
 }
 
 .subcription-text h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
 }
 
 .subcription-text p {
@@ -1145,7 +1145,7 @@ body::before {
 
 .cake-catalog-container {
     max-width: 100%;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-bottom: 8%;
     margin-top: auto;
     color: #d0e0c8;
@@ -1340,6 +1340,7 @@ body::before {
     justify-content: center;
     padding-left: 12%;
     padding-right: 8%;
+    margin-bottom: 8%;
 }
 
 .cake3 .image {
@@ -1390,5 +1391,188 @@ body::before {
 
     .cake3 .content {
         padding: 20px;
+    }
+}
+
+
+
+
+
+.container-cake4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin-left: 16%;
+    margin-top: 6%;
+}
+.text-section-cake4 {
+    flex: 1;
+    min-width: 300px;
+}
+.text-section-cake4 h2 {
+    font-size: 26px;
+    color: #d0e0c8;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.text-section-cake4 p {
+    font-size: 16px;
+    color: #ffffffda;
+    line-height: 2.2rem;
+}
+.btn-cake4 {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #d0e0c8;
+    color: #d0e0c8;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+    margin-top: 3%;
+}
+.btn-cake4:hover {
+    background-color: #d0e0c8;
+    color: #004D40;
+}
+.image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+.image-container {
+    position: relative;
+    width: 120px;
+    height: 160px;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-container.arch {
+    height: 350px;
+    width: 45%;
+    border: 4px solid #d0e0c8;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.image-container.arch img{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.image-container.round {
+    height: 180px;
+    width: 180px;
+    border: 4px solid #d0e0c8;
+    border-radius: 50%;
+    margin-top: -5%;
+}
+.image-container.round img{
+    border-radius: 50%;
+}
+.image-container.square {
+    width: 200px;
+    height: 200px;
+    margin-left: 52%;
+    margin-top: -42%;
+    border: 4px solid #d0e0c8;
+    border-radius: 10%;
+}
+.image-container.square img{
+    border-radius: 10%;
+}
+.cake4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+@media (max-width: 768px) {
+    .container-cake4 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image-section, .cake4 {
+        justify-content: center;
+        align-items: center;
+    }
+    .image-container.square {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* /////////////////////////BLOG CSSS START///////////////////////// */
+
+.blog1-creations-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 12%;
+}
+
+.blog1-creations-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d0e0c8;
+    margin-bottom: 10px;
+}
+
+.blog1-products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog1-creation-box {
+    background-color: #d0e0c8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.blog1-creation-box:hover {
+    transform: scale(1.05);
+}
+
+.blog1-creation-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blog1-creation-box p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #004D40;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .blog1-products {
+        flex-direction: column;
+        align-items: center;
     }
 }
