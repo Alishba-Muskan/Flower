@@ -17,7 +17,7 @@ showNavBar.innerHTML = ` <a href=""></a>
     </nav>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="./test.html">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li class="dropdown">
                 <a href="#">Occasions ▼</a>
                 <ul class="dropdown-menu">
@@ -114,18 +114,18 @@ subscription.innerHTML = `
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Cakes</a></li>
-                    <li><a href="#">Gifts</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./cake.html">Cakes</a></li>
+                    <li><a href="./gift.html">Gifts</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Packaging</h4>
                 <ul>
-                    <li><a href="index.html">Ribbons</a></li>
+                    <li><a href="">Ribbons</a></li>
                     <li><a href="#">Paper Wraps</a></li>
                     <li><a href="#">Baskets</a></li>
                     <li><a href="#">Gift Boxes</a></li>
